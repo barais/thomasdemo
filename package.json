@@ -1,0 +1,13 @@
+{
+  "name": "demotsjquery",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jquery": "^3.3.29"
+  },
+  "devDependencies": {
+    "typescript": "^3.4.5"
+  }
+}
