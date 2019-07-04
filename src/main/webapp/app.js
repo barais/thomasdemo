@@ -38,6 +38,8 @@ $(document).ready(function () {
             success: function (data) {
                 //On ajax success do this
                 console.log(data);
+                var t = data;
+                $("#article1").append('<h2>Greetings ' + t.a + '</h2>');
             },
             error: function (error) {
                 console.log(error);

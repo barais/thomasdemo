@@ -46,6 +46,9 @@ class Pay{
             success: function(data){
               //On ajax success do this
                   console.log(data);
+                  const t  = data as Pay
+                  $("#article1").append('<h2>Greetings ' + t.a + '</h2>' )
+
                },
             error: function(error) {
                 console.log(error);
