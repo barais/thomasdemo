@@ -10,14 +10,15 @@ var Msg = /** @class */ (function () {
 }());
 
 var Tp = /** @class */ (function () {
-    function Tp(tp1,tp2) {
+    function Tp(tp1,tp2,tp3) {
         this.tp1 = tp1;
         this.tp2 = tp2;
+        this.tp3 = tp3;
     }
     return Tp;
 }());
 
-var tousTps = new Tp("", "")   // que 2 tps 
+var tousTps = new Tp("", "", "")   // que 3 tps 
 
 // initialisation des balises pour tous les tps
 for (var prop in tousTps){

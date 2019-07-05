@@ -25,21 +25,21 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport  {
       case "Pay" =>{
         val p2= new Pay( (p.a,(p.b,p.c)),p.d);
         println(p2)
-        new Tp("tp1: ok","tp2: nok");
+        new Tp("tp1: ok","tp2: nok", "tp3: ok/nok");
       }
       case "Ack" =>{
         val p2= new Ack( (p.a,(p.b,p.c)),p.d);
         println(p2)
-        new Tp("tp1: ok2","tp2: nok2");
+        new Tp("tp1: ok2","tp2: nok2", "tp3: ack");
       }
       case "Cancel" =>{
         val p2= new Cancel( (p.a,(p.b,p.c)));
         println(p2)
-        new Tp("tp1: ok3","tp2: nok3");
+        new Tp("tp1: ok3","tp2: nok3", "tp3: cancel");
       }
       case s =>{
         println("Type de message indéfini: "+s)
-        new Tp("error","error")   
+        new Tp("error","error", "error")   
       }
     }
   }
@@ -61,7 +61,7 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport  {
 }
 
 case class Msg(ofType:String, a: Int, b: Int, c: Int, d:Int){}
-case class Tp(tp1:String,tp2:String)
+case class Tp(tp1:String,tp2:String, tp3:String)
 
 // For the demo
 case class Payd( a: Int,  b: Int,  c: Int,  d:Int){}
