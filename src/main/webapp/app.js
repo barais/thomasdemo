@@ -69,7 +69,6 @@ $(document).ready(function () {
             dataType: 'json',
             success: function (data) {
                 //On ajax success do this
-                histo= $("#messages");
                 var t = data;  // reads Tp results from the server
                 update(t,p);
             },
@@ -93,8 +92,6 @@ $(document).ready(function () {
             dataType: 'json',
             success: function (data) {
                 //On ajax success do this
-                console.log("success")
-                console.log(data);
                 var t = data;  // reads Tp results from the server
                 update(t,p);
             },
@@ -118,8 +115,6 @@ $(document).ready(function () {
             dataType: 'json',
             success: function (data) {
                 //On ajax success do this
-                console.log("success")
-                console.log(data);
                 var t = data;  // reads Tp results from the server
                 update(t,p);
             },
