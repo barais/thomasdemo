@@ -9,6 +9,13 @@ var Msg = /** @class */ (function () {
     return Msg;
 }());
 
+// Le toString des Msg un peu évolué
+Msg.prototype.toString= function toString(){
+    var s='';
+    if (this.ofType!='Cancel') s=','+this.d;
+    return(this.ofType+'('+this.a+','+this.b+','+this.c+s+')')
+}
+
 var Tp = /** @class */ (function () {
     function Tp(tp1,tp2,tp3) {
         this.tp1 = tp1;
@@ -35,11 +42,16 @@ function resultString(r,s){
     resObj.text(s)
 }
 
-// Mise à jour des pour tous les tps
-function update(res){
+// Mise à jour de l'historique des messages et du résultat pour tous les tps
+function update(res,p){
     for (var prop in res){
         resultString(prop,res[prop])
     }
+    const histo= $("#messages")
+    if (histo.text()==''){
+       histo.text(p) 
+    } else 
+    histo.text(histo.text()+', '+p)
 }
 
 $(document).ready(function () {
@@ -57,10 +69,9 @@ $(document).ready(function () {
             dataType: 'json',
             success: function (data) {
                 //On ajax success do this
-                console.log("success")
-                console.log(data);
+                histo= $("#messages");
                 var t = data;  // reads Tp results from the server
-                update(t);
+                update(t,p);
             },
             error: function (error) {
                 console.log(error);
@@ -85,7 +96,7 @@ $(document).ready(function () {
                 console.log("success")
                 console.log(data);
                 var t = data;  // reads Tp results from the server
-                update(t);
+                update(t,p);
             },
             error: function (error) {
                 console.log(error);
@@ -110,7 +121,7 @@ $(document).ready(function () {
                 console.log("success")
                 console.log(data);
                 var t = data;  // reads Tp results from the server
-                update(t);
+                update(t,p);
             },
             error: function (error) {
                 console.log(error);

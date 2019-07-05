@@ -17,8 +17,12 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport  {
     new Payd(p.a,p.b,p.c,p.d);
   }  
 
-  post("/toserver") {
-    print(multiParams("msg"))   //http://localhost:8080/index2.html?msg=1&msg=2 
+  get("toserver"){
+    println(multiParams("msg"))   //http://localhost:8080/index2.html?msg=1&msg=2 
+    println(params("msg"))   //http://localhost:8080/index2.html?msg=1&msg=2 
+  }
+
+  post("/toserver") {    
     val p = parsedBody.extract[Msg]
     println(p);
     p.ofType match{
