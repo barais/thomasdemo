@@ -9,7 +9,7 @@ var Msg = /** @class */ (function () {
     return Msg;
 }());
 
-// Le toString des Msg un peu évolué
+// On remplace le toString des Msg de façon à avoir des mesages Pay/Ack/Cancel dans le navigateur
 Msg.prototype.toString= function toString(){
     var s='';
     if (this.ofType!='Cancel') s=','+this.d;
@@ -35,7 +35,6 @@ for (var prop in tousTps){
     }
 }
 
-
 // Remplacement de la chaîne s dans la zone de résultat r
 function resultString(r,s){
     const resObj= $("#"+r);
@@ -54,6 +53,7 @@ function update(res,p){
     histo.text(histo.text()+', '+p)
 }
 
+// Les fonctions associées aux boutons du document
 $(document).ready(function () {
     $('#client-sends').click(function () {
         // Je construis mon objet métier

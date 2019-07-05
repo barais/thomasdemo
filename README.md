@@ -5,6 +5,9 @@ Il ne reste plus que le serveur Scalatra <-JSON-> Client javascript.
 
 Le workflow typique (pour modification et test local) est (sur les sources dans src/main):
 
+1. mise à jour des .jar des tps dans ```src/main/scala/lib/```
+2. mise à jour de bank et solutions dans ```src/bank/``` (ne peut pas changer le rép sauf si on change cela aussi dans le projet initial donné aux étudiants. **Remarque**: j'ai dû configurer 2 chemins spécifiques dans le build.sbt pour ces 2 chemins.
+
 1. mise à jour du serveur dans: scala/fr/istic/app
 2. mise à jour de la page web dans webapp
    par ex. index-demo.html

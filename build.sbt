@@ -23,3 +23,7 @@ libraryDependencies ++= Seq(
 
 enablePlugins(SbtTwirl)
 enablePlugins(ScalatraPlugin)
+
+unmanagedBase := baseDirectory.value / "src/main/scala/lib/"
+
+unmanagedSourceDirectories in Compile += baseDirectory.value / "src/bank"
