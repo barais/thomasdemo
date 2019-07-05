@@ -1,3 +1,12 @@
+var Demo = /** @class */ (function () {
+    function Demo(mes) {
+        this.message = mes;
+    }
+    Demo.prototype.ClickGo = function () {
+        $("#lblGo").text("You pressed the Go button");
+    };
+    return Demo;
+}());
 var Pay = /** @class */ (function () {
     function Pay(a, b, c, d) {
         this.a = a;
@@ -7,32 +16,32 @@ var Pay = /** @class */ (function () {
     }
     return Pay;
 }());
-
+var dem = new Demo("bla bla bla bla");
 $(document).ready(function () {
+    $('#btnGo').click(function () {
+        dem.ClickGo();
+    });
     $('#client-sends').click(function () {
         console.log($("#client").val());
         // Je construit mon objet métier
         var p = new Pay(+$("#client").val(), +$("#merchant").val(), +$("#transaction").val(), +$("#amount").val());
-        console.log('JSON='+JSON.stringify(p));
+        console.log(JSON.stringify(p));
         // Je l'envoie au serveur
         console.log(jQuery);
         $.ajax({
-            url: '/todemo',    //l'url où la requête du client va être envoyée (on va trouver la même dans MyScalaServlet)... on peut en avoir plusieurs!
+            url: '/toserver',
             type: 'POST',
             contentType: 'application/json',
             data: JSON.stringify(p),
             dataType: 'json',
             success: function (data) {
                 //On ajax success do this
-                console.log("success!")
                 console.log(data);
                 var t = data;
-                const resObj1= $("#res1");
-                const resText1= resObj1.text();
-                resObj1.text(resText1 + t.a);
-
-                const resObj2= $("#res2");
-                resObj2.append('<b>'+ t.a +"," + t.b + '</b>')
+                $("#article1").append('<h2>Greetings ' + t.a + '</h2>');
+                const resObj= $("#res");
+                const resText= resObj.text();
+                resObj.text(resText + t.a);
             },
             error: function (error) {
                 console.log(error);
@@ -40,3 +49,4 @@ $(document).ready(function () {
         });
     });
 });
+//# sourceMappingURL=app.js.map

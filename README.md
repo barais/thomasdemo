@@ -8,7 +8,7 @@ Le workflow typique (pour modification et test local) est (sur les sources dans 
 1. mise à jour du serveur dans: scala/fr/istic/app
 2. mise à jour de la page web dans webapp
    par ex. index-demo.html
-3. mise à jour du code javascript dans  webapp
+3. mise à jour du code javascript (avec visual studio par ex) dans  webapp
    par ex. app-demo.html
 3. compilation du merdier: dans thomasdemo lancer ```sbt``` puis dans sbt ```jetty:start```  pour démarrer le serveur.
 

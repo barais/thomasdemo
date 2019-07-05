@@ -10,22 +10,62 @@ import org.scalatra.json._
 class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport  {
   protected implicit val jsonFormats: Formats = DefaultFormats
 
-  post("/toserver") {
-    val p = parsedBody.extract[Pay]
-    println(p);
-    new Pay(p.a,p.b,p.c,p.d);
-  }  
-
   post("/todemo") {
-    val p = parsedBody.extract[Pay]
+    val p = parsedBody.extract[Payd]
     println(p);
     //returns
-    new Pay(p.a,p.b,p.c,p.d);
+    new Payd(p.a,p.b,p.c,p.d);
   }  
+
+  post("/toserver") {
+    print(multiParams("msg"))   //http://localhost:8080/index2.html?msg=1&msg=2 
+    val p = parsedBody.extract[Msg]
+    println(p);
+    p.ofType match{
+      case "Pay" =>{
+        val p2= new Pay( (p.a,(p.b,p.c)),p.d);
+        println(p2)
+        new Tp("tp1: ok","tp2: nok");
+      }
+      case "Ack" =>{
+        val p2= new Ack( (p.a,(p.b,p.c)),p.d);
+        println(p2)
+        new Tp("tp1: ok2","tp2: nok2");
+      }
+      case "Cancel" =>{
+        val p2= new Cancel( (p.a,(p.b,p.c)));
+        println(p2)
+        new Tp("tp1: ok3","tp2: nok3");
+      }
+      case s =>{
+        println("Type de message indéfini: "+s)
+        new Tp("error","error")   
+      }
+    }
+  }
+
+//   post("/toserverAck") {
+//     val p = parsedBody.extract[Ack]
+//     println(p);
+//     //returns
+//     new Ack(p.a,p.b,p.c,p.d);
+//   }  
+
+//   post("/toserverCab") {
+//     val p = parsedBody.extract[Ack]
+//     println(p);
+//     //returns
+//     new Ack(p.a,p.b,p.c,p.d);
+//   }  
 
 }
 
 case class Msg(ofType:String, a: Int, b: Int, c: Int, d:Int){}
+case class Tp(tp1:String,tp2:String)
 
 // For the demo
-case class Pay( a: Int,  b: Int,  c: Int,  d:Int){}
+case class Payd( a: Int,  b: Int,  c: Int,  d:Int){}
+
+case class Pay(a: (Int, (Int, Int)), m: Int){}
+case class Ack(a: (Int, (Int, Int)), m: Int){}
+case class Cancel(a: (Int, (Int, Int))){}
