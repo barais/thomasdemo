@@ -44,6 +44,13 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport  {
     val res= Solutions.init.process(List()).toList
     res
   }
+  
+  post("/todemo") {
+    val p = parsedBody.extract[Payd]
+    println(p);
+    //returns
+    new Payd(p.a,p.b,p.c,p.d);
+  }
 }
 
 case class Msg(ofType:String, a: Int, b: Int, c: Int, d:Int){}
