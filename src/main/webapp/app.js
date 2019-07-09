@@ -1,3 +1,4 @@
+// Le format des messages vu depuis javascript 
 var Msg = /** @class */ (function () {
     function Msg(ofType, a, b, c, d) {
         this.ofType = ofType;
@@ -9,38 +10,39 @@ var Msg = /** @class */ (function () {
     return Msg;
 }());
 
+// L'historique des messages
 var msgHistory= new Array();
 
-// On remplace le toString des Msg de façon à avoir des mesages Pay/Ack/Cancel dans le navigateur
+// On remplace le toString des Msg de façon à avoir des messages Pay/Ack/Cancel dans le navigateur
 Msg.prototype.toString= function toString(){
     var s='';
     if (this.ofType!='Cancel') s=','+this.d;
     return(this.ofType+'('+this.a+','+this.b+','+this.c+s+')')
 }
 
-// var Tp = /** @class */ (function () {
-//     function Tp(tp1,tp2,tp3) {
-//         this.tp1 = tp1;
-//         this.tp2 = tp2;
-//         this.tp3 = tp3;
-//     }
-//     return Tp;
-// }());
+// On récupère la liste de tous les noms de Tps
+// et on complète la page web avec les balises nécessaires
+$.ajax({
+	url: '/toserver',
+	type: 'GET',
+	datatype : 'json',
+	success: function(data){
+		initResPage(data);
+	},
+	error: function(error){
+		console.log("init error:"+error);
+	}
 
-var Tpassoc = /** @class */ (function () {
-    function Tpassoc(name,resultat) {
-        this.name = name;
-        this.resultat = resultat;
-    }
-    return Tpassoc;
-}());
+})
 
-var tousTps = ["genetProved","Adili"];
-
-// initialisation des balises pour tous les tps
-for (var tp of tousTps){
-    const res= $("#res")
-    res.append('<il><b>'+tp+': </b> <label id='+tp+'>'+""+'</label><br><br>')
+// initialisation des balises pour afficher les résultats de tous les tps
+function initResPage(ltps){
+	const res= $("#res");
+	res.append('<ul>');
+	for (var tp of ltps){
+		res.append('<li><b>'+tp.name+': </b> <label id='+tp.name+'>'+""+'</label></li><br>');
+	}
+	res.append('</ul>')
 }
 
 // Remplacement de la chaîne s dans la zone de résultat r
@@ -50,12 +52,15 @@ function resultString(r,s){
 }
 
 // Mise à jour de l'historique des messages et du résultat pour tous les tps
-function update(res,h){
+// Tout ce que l'on sait sur ret (passé depuis scala vers javascript en passant par JSON)
+// c'est que c'est un tableau d'objets dont les 2 champs sont
+// name et resultat
+function update(ret,h){
     // res= le retour du serveur
     // h= l'historique des messages
-    resL=res.length;
-    for (i=0; i<resL; i++){
-        resultString(res[i].name,res[i].res)
+    const retL=ret.length;
+    for (i=0; i<retL; i++){
+        resultString(ret[i].name,ret[i].resultat)
     }
     const histo= $("#messages");
     histo.text(h);
@@ -79,7 +84,6 @@ $(document).ready(function () {
             success: function (data) {
                 //On ajax success do this
                 var ret = data;  // reads Tp results from the server
-                console.log(data);
                 update(ret,msgHistory);
             },
             error: function (error) {
@@ -104,7 +108,6 @@ $(document).ready(function () {
             success: function (data) {
                 //On ajax success do this
                 var ret = data;  // reads Tp results from the server
-                console.log(data);
                 update(ret,msgHistory);
             },
             error: function (error) {
@@ -129,7 +132,6 @@ $(document).ready(function () {
             success: function (data) {
                 //On ajax success do this
                 var ret = data;  // reads Tp results from the server
-                console.log(data);
                 update(ret,msgHistory);
             },
             error: function (error) {

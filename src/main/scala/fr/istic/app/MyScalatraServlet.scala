@@ -13,13 +13,10 @@ import bank.Solutions
 class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport  {
   
   protected implicit def int2Nat(x:Int)= Nat.Nata(BigInt(x))
-  protected def assoc[T1,T2](x:T1, l:List[(T1,T2)]):T2=
-    l match {
-    case (y,z)::r => if (x==y) z else assoc(x,r)
-  }
   
-  protected implicit val jsonFormats: Formats = DefaultFormats
+  protected implicit lazy val jsonFormats: Formats = DefaultFormats
 
+  
   // converts external messages (from javascript) to internal bank message
   protected def ext2msg(l:List[Msg]):List[message]=
     l match {
@@ -29,34 +26,26 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport  {
     case Msg("Cancel",c,m,t,_)::r => (new Cancel( (c,(m,t))))::ext2msg(r)
     case Msg(s,_,_,_,_)::_ => println("ext2msg cannot convert : "+s); List()
   }
-//  get("toserver"){
-//    println(multiParams("msg"))   //http://localhost:8080/index2.html?msg=1&msg=2 
-//    println(params("msg"))   //http://localhost:8080/index2.html?msg=1&msg=2 
-//  }
 
   post("/toserver") {    
     println("toto")
     val tab = parsedBody.extract[Array[Msg]]
-    println(tab.toList)
     val msg= ext2msg(tab.toList)
-    val res= Solutions.init.process(msg).toArray
-    println(res.toList)
-    res.toList
+    val res= Solutions.init.process(msg).toList
+    res
+  }
+  
+  // Before every action runs, set the content type to be in JSON format.
+  // Useful for the answer of the get request below
+  before() {
+    contentType = formats("json")
+  }
+  
+  get("/toserver"){
+    val res= Solutions.init.process(List()).toList
+    res
   }
 }
-//   post("/toserverAck") {
-//     val p = parsedBody.extract[Ack]
-//     println(p);
-//     //returns
-//     new Ack(p.a,p.b,p.c,p.d);
-//   }  
-
-//   post("/toserverCab") {
-//     val p = parsedBody.extract[Ack]
-//     println(p);
-//     //returns
-//     new Ack(p.a,p.b,p.c,p.d);
-//   }  
 
 case class Msg(ofType:String, a: Int, b: Int, c: Int, d:Int){}
 case class Tp(tp1:String,tp2:String, tp3:String)
@@ -64,6 +53,3 @@ case class Tp(tp1:String,tp2:String, tp3:String)
 // For the demo
 case class Payd( a: Int,  b: Int,  c: Int,  d:Int){}
 
-//case class Pay(a: (Int, (Int, Int)), m: Int){}
-//case class Ack(a: (Int, (Int, Int)), m: Int){}
-//case class Cancel(a: (Int, (Int, Int))){}
