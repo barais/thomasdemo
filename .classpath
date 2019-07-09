@@ -1,233 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-  <classpathentry kind="src" path="src/main/scala"/>
-  <classpathentry kind="src" path="src/bank"/>
-  <classpathentry kind="src" path="src/main/resources"/>
-  <classpathentry kind="src" path="target/scala-2.12/twirl/main"/>
-  <classpathentry kind="src" path="src/test/scala"/>
-  <classpathentry kind="lib" path="./src/main/scala/lib/Adili.jar"/>
-  <classpathentry kind="lib" path="./src/main/scala/lib/genetProved.jar"/>
-  <classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"></classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/com.typesafe.play/twirl-api_2.12/srcs/twirl-api_2.12-1.3.13-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/com.typesafe.play/twirl-api_2.12/jars/twirl-api_2.12-1.3.13.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/com.typesafe.play/twirl-api_2.12/docs/twirl-api_2.12-1.3.13-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra_2.12/srcs/scalatra_2.12-2.6.5-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra_2.12/jars/scalatra_2.12-2.6.5.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra_2.12/docs/scalatra_2.12-2.6.5-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-common_2.12/srcs/scalatra-common_2.12-2.6.5-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-common_2.12/jars/scalatra-common_2.12-2.6.5.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-common_2.12/docs/scalatra-common_2.12-2.6.5-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.slf4j/slf4j-api/srcs/slf4j-api-1.7.25-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.25.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.slf4j/slf4j-api/docs/slf4j-api-1.7.25-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/com.googlecode.juniversalchardet/juniversalchardet/srcs/juniversalchardet-1.0.3-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/com.googlecode.juniversalchardet/juniversalchardet/jars/juniversalchardet-1.0.3.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/com.googlecode.juniversalchardet/juniversalchardet/docs/juniversalchardet-1.0.3-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/eu.medsea.mimeutil/mime-util/bundles/mime-util-2.1.3.jar"/>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.apache.commons/commons-lang3/srcs/commons-lang3-3.6-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.6.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.apache.commons/commons-lang3/docs/commons-lang3-3.6-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/srcs/scala-parser-combinators_2.12-1.0.6-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/bundles/scala-parser-combinators_2.12-1.0.6.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/docs/scala-parser-combinators_2.12-1.0.6-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-json_2.12/srcs/scalatra-json_2.12-2.6.5-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-json_2.12/jars/scalatra-json_2.12-2.6.5.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-json_2.12/docs/scalatra-json_2.12-2.6.5-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/com.thoughtworks.paranamer/paranamer/srcs/paranamer-2.8-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/com.thoughtworks.paranamer/paranamer/bundles/paranamer-2.8.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/com.thoughtworks.paranamer/paranamer/docs/paranamer-2.8-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-xml_2.12/srcs/json4s-xml_2.12-3.6.3-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-xml_2.12/jars/json4s-xml_2.12-3.6.3.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-xml_2.12/docs/json4s-xml_2.12-3.6.3-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/srcs/scala-xml_2.12-1.1.0-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/bundles/scala-xml_2.12-1.1.0.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/docs/scala-xml_2.12-1.1.0-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-jackson_2.12/srcs/json4s-jackson_2.12-3.6.6-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-jackson_2.12/jars/json4s-jackson_2.12-3.6.6.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-jackson_2.12/docs/json4s-jackson_2.12-3.6.6-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-core_2.12/srcs/json4s-core_2.12-3.6.6-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-core_2.12/jars/json4s-core_2.12-3.6.6.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-core_2.12/docs/json4s-core_2.12-3.6.6-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-ast_2.12/srcs/json4s-ast_2.12-3.6.6-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-ast_2.12/jars/json4s-ast_2.12-3.6.6.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-ast_2.12/docs/json4s-ast_2.12-3.6.6-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-scalap_2.12/srcs/json4s-scalap_2.12-3.6.6-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-scalap_2.12/jars/json4s-scalap_2.12-3.6.6.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-scalap_2.12/docs/json4s-scalap_2.12-3.6.6-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/srcs/jackson-databind-2.9.8-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.9.8.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/docs/jackson-databind-2.9.8-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/srcs/jackson-annotations-2.9.0-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.9.0.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/docs/jackson-annotations-2.9.0-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/srcs/jackson-core-2.9.8-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.9.8.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/docs/jackson-core-2.9.8-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/ch.qos.logback/logback-classic/srcs/logback-classic-1.2.3-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.2.3.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/ch.qos.logback/logback-classic/docs/logback-classic-1.2.3-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/ch.qos.logback/logback-core/srcs/logback-core-1.2.3-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.2.3.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/ch.qos.logback/logback-core/docs/logback-core-1.2.3-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-scalatest_2.12/srcs/scalatra-scalatest_2.12-2.6.5-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-scalatest_2.12/jars/scalatra-scalatest_2.12-2.6.5.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-scalatest_2.12/docs/scalatra-scalatest_2.12-2.6.5-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-test_2.12/srcs/scalatra-test_2.12-2.6.5-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-test_2.12/jars/scalatra-test_2.12-2.6.5.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-test_2.12/docs/scalatra-test_2.12-2.6.5-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-webapp/srcs/jetty-webapp-9.4.6.v20170531-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-webapp/jars/jetty-webapp-9.4.6.v20170531.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-webapp/docs/jetty-webapp-9.4.6.v20170531-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-xml/srcs/jetty-xml-9.4.6.v20170531-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-xml/jars/jetty-xml-9.4.6.v20170531.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-xml/docs/jetty-xml-9.4.6.v20170531-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-util/srcs/jetty-util-9.4.6.v20170531-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-util/jars/jetty-util-9.4.6.v20170531.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-util/docs/jetty-util-9.4.6.v20170531-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-servlet/srcs/jetty-servlet-9.4.6.v20170531-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-servlet/jars/jetty-servlet-9.4.6.v20170531.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-servlet/docs/jetty-servlet-9.4.6.v20170531-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-security/srcs/jetty-security-9.4.6.v20170531-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-security/jars/jetty-security-9.4.6.v20170531.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-security/docs/jetty-security-9.4.6.v20170531-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-server/srcs/jetty-server-9.4.6.v20170531-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-server/jars/jetty-server-9.4.6.v20170531.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-server/docs/jetty-server-9.4.6.v20170531-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/javax.servlet/javax.servlet-api/srcs/javax.servlet-api-3.1.0-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/javax.servlet/javax.servlet-api/jars/javax.servlet-api-3.1.0.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/javax.servlet/javax.servlet-api/docs/javax.servlet-api-3.1.0-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-http/srcs/jetty-http-9.4.6.v20170531-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-http/jars/jetty-http-9.4.6.v20170531.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-http/docs/jetty-http-9.4.6.v20170531-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-io/srcs/jetty-io-9.4.6.v20170531-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-io/jars/jetty-io-9.4.6.v20170531.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-io/docs/jetty-io-9.4.6.v20170531-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.mockito/mockito-core/srcs/mockito-core-2.7.22-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.mockito/mockito-core/jars/mockito-core-2.7.22.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.mockito/mockito-core/docs/mockito-core-2.7.22-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.apache.httpcomponents/httpclient/srcs/httpclient-4.5.3-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.5.3.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.apache.httpcomponents/httpclient/docs/httpclient-4.5.3-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.apache.httpcomponents/httpcore/srcs/httpcore-4.4.6-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.apache.httpcomponents/httpcore/jars/httpcore-4.4.6.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.apache.httpcomponents/httpcore/docs/httpcore-4.4.6-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/commons-logging/commons-logging/srcs/commons-logging-1.2-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.2.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/commons-logging/commons-logging/docs/commons-logging-1.2-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/commons-codec/commons-codec/srcs/commons-codec-1.9-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.9.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/commons-codec/commons-codec/docs/commons-codec-1.9-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.apache.httpcomponents/httpmime/srcs/httpmime-4.5.3-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.apache.httpcomponents/httpmime/jars/httpmime-4.5.3.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.apache.httpcomponents/httpmime/docs/httpmime-4.5.3-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.scalatest/scalatest_2.12/srcs/scalatest_2.12-3.0.3-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.scalatest/scalatest_2.12/bundles/scalatest_2.12-3.0.3.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.scalatest/scalatest_2.12/docs/scalatest_2.12-3.0.3-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.scalactic/scalactic_2.12/srcs/scalactic_2.12-3.0.3-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.scalactic/scalactic_2.12/bundles/scalactic_2.12-3.0.3.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.scalactic/scalactic_2.12/docs/scalactic_2.12-3.0.3-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/junit/junit/srcs/junit-4.12-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/junit/junit/jars/junit-4.12.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/junit/junit/docs/junit-4.12-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.hamcrest/hamcrest-core/srcs/hamcrest-core-1.3-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.3.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.hamcrest/hamcrest-core/docs/hamcrest-core-1.3-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/net.bytebuddy/byte-buddy/srcs/byte-buddy-1.6.11-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/net.bytebuddy/byte-buddy/jars/byte-buddy-1.6.11.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/net.bytebuddy/byte-buddy/docs/byte-buddy-1.6.11-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/net.bytebuddy/byte-buddy-agent/srcs/byte-buddy-agent-1.6.11-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/net.bytebuddy/byte-buddy-agent/jars/byte-buddy-agent-1.6.11.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/net.bytebuddy/byte-buddy-agent/docs/byte-buddy-agent-1.6.11-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="/Users/thomasgenet/.ivy2/cache/org.objenesis/objenesis/srcs/objenesis-2.5-sources.jar" kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.objenesis/objenesis/jars/objenesis-2.5.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.objenesis/objenesis/docs/objenesis-2.5-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-  <classpathentry kind="output" path="bin"/>
+	<classpathentry kind="src" path="src/main/scala"/>
+	<classpathentry kind="src" path="src/bank"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="src" path="target/scala-2.12/twirl/main"/>
+	<classpathentry kind="src" path="src/test/scala"/>
+	<classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/com.typesafe.play/twirl-api_2.12/jars/twirl-api_2.12-1.3.13.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/com.typesafe.play/twirl-api_2.12/srcs/twirl-api_2.12-1.3.13-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/com.typesafe.play/twirl-api_2.12/docs/twirl-api_2.12-1.3.13-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra_2.12/jars/scalatra_2.12-2.6.5.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra_2.12/srcs/scalatra_2.12-2.6.5-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra_2.12/docs/scalatra_2.12-2.6.5-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-common_2.12/jars/scalatra-common_2.12-2.6.5.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-common_2.12/srcs/scalatra-common_2.12-2.6.5-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-common_2.12/docs/scalatra-common_2.12-2.6.5-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.25.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.slf4j/slf4j-api/srcs/slf4j-api-1.7.25-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.slf4j/slf4j-api/docs/slf4j-api-1.7.25-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/com.googlecode.juniversalchardet/juniversalchardet/jars/juniversalchardet-1.0.3.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/com.googlecode.juniversalchardet/juniversalchardet/srcs/juniversalchardet-1.0.3-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/com.googlecode.juniversalchardet/juniversalchardet/docs/juniversalchardet-1.0.3-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/eu.medsea.mimeutil/mime-util/bundles/mime-util-2.1.3.jar"/>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.6.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.apache.commons/commons-lang3/srcs/commons-lang3-3.6-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.apache.commons/commons-lang3/docs/commons-lang3-3.6-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/bundles/scala-parser-combinators_2.12-1.0.6.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/srcs/scala-parser-combinators_2.12-1.0.6-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/docs/scala-parser-combinators_2.12-1.0.6-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-json_2.12/jars/scalatra-json_2.12-2.6.5.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-json_2.12/srcs/scalatra-json_2.12-2.6.5-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-json_2.12/docs/scalatra-json_2.12-2.6.5-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/com.thoughtworks.paranamer/paranamer/bundles/paranamer-2.8.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/com.thoughtworks.paranamer/paranamer/srcs/paranamer-2.8-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/com.thoughtworks.paranamer/paranamer/docs/paranamer-2.8-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-xml_2.12/jars/json4s-xml_2.12-3.6.3.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-xml_2.12/srcs/json4s-xml_2.12-3.6.3-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-xml_2.12/docs/json4s-xml_2.12-3.6.3-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/bundles/scala-xml_2.12-1.1.0.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/srcs/scala-xml_2.12-1.1.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/docs/scala-xml_2.12-1.1.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-jackson_2.12/jars/json4s-jackson_2.12-3.6.6.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-jackson_2.12/srcs/json4s-jackson_2.12-3.6.6-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-jackson_2.12/docs/json4s-jackson_2.12-3.6.6-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-core_2.12/jars/json4s-core_2.12-3.6.6.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-core_2.12/srcs/json4s-core_2.12-3.6.6-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-core_2.12/docs/json4s-core_2.12-3.6.6-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-ast_2.12/jars/json4s-ast_2.12-3.6.6.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-ast_2.12/srcs/json4s-ast_2.12-3.6.6-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-ast_2.12/docs/json4s-ast_2.12-3.6.6-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-scalap_2.12/jars/json4s-scalap_2.12-3.6.6.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-scalap_2.12/srcs/json4s-scalap_2.12-3.6.6-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.json4s/json4s-scalap_2.12/docs/json4s-scalap_2.12-3.6.6-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.9.8.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/srcs/jackson-databind-2.9.8-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/docs/jackson-databind-2.9.8-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.9.0.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/srcs/jackson-annotations-2.9.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/docs/jackson-annotations-2.9.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.9.8.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/srcs/jackson-core-2.9.8-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/docs/jackson-core-2.9.8-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.2.3.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/ch.qos.logback/logback-classic/srcs/logback-classic-1.2.3-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/ch.qos.logback/logback-classic/docs/logback-classic-1.2.3-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.2.3.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/ch.qos.logback/logback-core/srcs/logback-core-1.2.3-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/ch.qos.logback/logback-core/docs/logback-core-1.2.3-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-scalatest_2.12/jars/scalatra-scalatest_2.12-2.6.5.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-scalatest_2.12/srcs/scalatra-scalatest_2.12-2.6.5-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-scalatest_2.12/docs/scalatra-scalatest_2.12-2.6.5-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-test_2.12/jars/scalatra-test_2.12-2.6.5.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-test_2.12/srcs/scalatra-test_2.12-2.6.5-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.scalatra/scalatra-test_2.12/docs/scalatra-test_2.12-2.6.5-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-webapp/jars/jetty-webapp-9.4.6.v20170531.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-webapp/srcs/jetty-webapp-9.4.6.v20170531-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-webapp/docs/jetty-webapp-9.4.6.v20170531-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-xml/jars/jetty-xml-9.4.6.v20170531.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-xml/srcs/jetty-xml-9.4.6.v20170531-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-xml/docs/jetty-xml-9.4.6.v20170531-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-util/jars/jetty-util-9.4.6.v20170531.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-util/srcs/jetty-util-9.4.6.v20170531-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-util/docs/jetty-util-9.4.6.v20170531-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-servlet/jars/jetty-servlet-9.4.6.v20170531.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-servlet/srcs/jetty-servlet-9.4.6.v20170531-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-servlet/docs/jetty-servlet-9.4.6.v20170531-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-security/jars/jetty-security-9.4.6.v20170531.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-security/srcs/jetty-security-9.4.6.v20170531-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-security/docs/jetty-security-9.4.6.v20170531-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-server/jars/jetty-server-9.4.6.v20170531.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-server/srcs/jetty-server-9.4.6.v20170531-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-server/docs/jetty-server-9.4.6.v20170531-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/javax.servlet/javax.servlet-api/jars/javax.servlet-api-3.1.0.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/javax.servlet/javax.servlet-api/srcs/javax.servlet-api-3.1.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/javax.servlet/javax.servlet-api/docs/javax.servlet-api-3.1.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-http/jars/jetty-http-9.4.6.v20170531.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-http/srcs/jetty-http-9.4.6.v20170531-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-http/docs/jetty-http-9.4.6.v20170531-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-io/jars/jetty-io-9.4.6.v20170531.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-io/srcs/jetty-io-9.4.6.v20170531-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.eclipse.jetty/jetty-io/docs/jetty-io-9.4.6.v20170531-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.mockito/mockito-core/jars/mockito-core-2.7.22.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.mockito/mockito-core/srcs/mockito-core-2.7.22-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.mockito/mockito-core/docs/mockito-core-2.7.22-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.5.3.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.apache.httpcomponents/httpclient/srcs/httpclient-4.5.3-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.apache.httpcomponents/httpclient/docs/httpclient-4.5.3-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.apache.httpcomponents/httpcore/jars/httpcore-4.4.6.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.apache.httpcomponents/httpcore/srcs/httpcore-4.4.6-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.apache.httpcomponents/httpcore/docs/httpcore-4.4.6-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.2.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/commons-logging/commons-logging/srcs/commons-logging-1.2-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/commons-logging/commons-logging/docs/commons-logging-1.2-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.9.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/commons-codec/commons-codec/srcs/commons-codec-1.9-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/commons-codec/commons-codec/docs/commons-codec-1.9-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.apache.httpcomponents/httpmime/jars/httpmime-4.5.3.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.apache.httpcomponents/httpmime/srcs/httpmime-4.5.3-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.apache.httpcomponents/httpmime/docs/httpmime-4.5.3-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.scalatest/scalatest_2.12/bundles/scalatest_2.12-3.0.3.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.scalatest/scalatest_2.12/srcs/scalatest_2.12-3.0.3-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.scalatest/scalatest_2.12/docs/scalatest_2.12-3.0.3-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.scalactic/scalactic_2.12/bundles/scalactic_2.12-3.0.3.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.scalactic/scalactic_2.12/srcs/scalactic_2.12-3.0.3-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.scalactic/scalactic_2.12/docs/scalactic_2.12-3.0.3-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/junit/junit/jars/junit-4.12.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/junit/junit/srcs/junit-4.12-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/junit/junit/docs/junit-4.12-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.3.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.hamcrest/hamcrest-core/srcs/hamcrest-core-1.3-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.hamcrest/hamcrest-core/docs/hamcrest-core-1.3-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/net.bytebuddy/byte-buddy/jars/byte-buddy-1.6.11.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/net.bytebuddy/byte-buddy/srcs/byte-buddy-1.6.11-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/net.bytebuddy/byte-buddy/docs/byte-buddy-1.6.11-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/net.bytebuddy/byte-buddy-agent/jars/byte-buddy-agent-1.6.11.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/net.bytebuddy/byte-buddy-agent/srcs/byte-buddy-agent-1.6.11-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/net.bytebuddy/byte-buddy-agent/docs/byte-buddy-agent-1.6.11-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomasgenet/.ivy2/cache/org.objenesis/objenesis/jars/objenesis-2.5.jar" sourcepath="/Users/thomasgenet/.ivy2/cache/org.objenesis/objenesis/srcs/objenesis-2.5-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.objenesis/objenesis/docs/objenesis-2.5-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="src/libJars/Adili.jar"/>
+	<classpathentry kind="lib" path="src/libJars/genetProved.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
 </classpath>

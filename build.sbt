@@ -24,6 +24,6 @@ libraryDependencies ++= Seq(
 enablePlugins(SbtTwirl)
 enablePlugins(ScalatraPlugin)
 
-unmanagedBase := baseDirectory.value / "src/lib/"
+unmanagedBase := baseDirectory.value / "src/libJars/"
 
 unmanagedSourceDirectories in Compile += baseDirectory.value / "src/bank"
