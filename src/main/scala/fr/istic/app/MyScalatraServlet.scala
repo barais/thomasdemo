@@ -20,44 +20,30 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport  {
   
   protected implicit val jsonFormats: Formats = DefaultFormats
 
+  // converts external messages (from javascript) to internal bank message
+  protected def ext2msg(l:List[Msg]):List[message]=
+    l match {
+    case Nil => Nil
+    case Msg("Pay",c,m,t,am)::r => (new Pay( (c,(m,t)),am))::ext2msg(r)
+    case Msg("Ack",c,m,t,am)::r => (new Ack( (c,(m,t)),am))::ext2msg(r)
+    case Msg("Cancel",c,m,t,_)::r => (new Cancel( (c,(m,t))))::ext2msg(r)
+    case Msg(s,_,_,_,_)::_ => println("ext2msg cannot convert : "+s); List()
+  }
 //  get("toserver"){
 //    println(multiParams("msg"))   //http://localhost:8080/index2.html?msg=1&msg=2 
 //    println(params("msg"))   //http://localhost:8080/index2.html?msg=1&msg=2 
 //  }
 
   post("/toserver") {    
-    val p = parsedBody.extract[Msg]
-    println(p);
-    val v= new validator.genetProved.ConcreteValidator()
-    println(v.authors)
-    println(v.getClass().getPackage().getName())
-    p.ofType match{
-      case "Pay" =>{
-        val p2= new Pay( (p.a,(p.b,p.c)),p.d);
-        println(p2)
-        val res= Solutions.init.process(p2).toList
-        println(res)
-        new Tp("genetProved: "+assoc("genetProved",res).toString,"tp1: nok", "tp3: ok/nok");
-      }
-      case "Ack" =>{
-        val p2= new Ack( (p.a,(p.b,p.c)),p.d);
-        println(p2)
-        val res= Solutions.init.process(p2).toList
-        new Tp("genetProved: "+assoc("genetProved",res).toString,"tp2: nok", "tp3: ok/nok");
-      }
-      case "Cancel" =>{
-        val p2= new Cancel( (p.a,(p.b,p.c)));
-        println(p2)
-        val res= Solutions.init.process(p2).toList
-        new Tp("genetProved: "+assoc("genetProved",res).toString,"tp3: nok", "tp3: ok/nok");
-      }
-      case s =>{
-        println("Type de message indéfini: "+s)
-        new Tp("error","error", "error")   
-      }
-    }
+    println("toto")
+    val tab = parsedBody.extract[Array[Msg]]
+    println(tab.toList)
+    val msg= ext2msg(tab.toList)
+    val res= Solutions.init.process(msg).toArray
+    println(res.toList)
+    res.toList
   }
-
+}
 //   post("/toserverAck") {
 //     val p = parsedBody.extract[Ack]
 //     println(p);
@@ -71,8 +57,6 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport  {
 //     //returns
 //     new Ack(p.a,p.b,p.c,p.d);
 //   }  
-
-}
 
 case class Msg(ofType:String, a: Int, b: Int, c: Int, d:Int){}
 case class Tp(tp1:String,tp2:String, tp3:String)

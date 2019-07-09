@@ -1,0 +1,5 @@
+/bin/
+/#build.sbt#
+/.DS_Store
+/.cache-main
+/.cache-tests

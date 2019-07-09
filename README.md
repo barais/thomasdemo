@@ -22,6 +22,8 @@ Dans index-demo et app-demo il y a un exemple proposé par Olivier au départ qu
 
 ----------
 
+Oldy but goody...
+
 Une seule fois après le git
 
 ```sh
@@ -43,4 +45,3 @@ $ tsc --watch
 
 
 If `browse` doesn't launch your browser, manually open [http://localhost:8080/](http://localhost:8080/) in your browser.
-# thomasdemo
