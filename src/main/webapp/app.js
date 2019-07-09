@@ -51,6 +51,12 @@ function resultString(r,s){
     resObj.text(s)
 }
 
+// Mon toString pour les tableaux de messages
+function mytostring(t){
+	const temp= t.map(x => x.toString());
+	return temp.join(', ')
+}
+
 // Mise à jour de l'historique des messages et du résultat pour tous les tps
 // Tout ce que l'on sait sur ret (passé depuis scala vers javascript en passant par JSON)
 // c'est que c'est un tableau d'objets dont les 2 champs sont
@@ -63,7 +69,8 @@ function update(ret,h){
         resultString(ret[i].name,ret[i].resultat)
     }
     const histo= $("#messages");
-    histo.text(h);
+    console.log("avant: "+h)
+    histo.text(mytostring(h))
 }
 
 // Les fonctions associées aux boutons du document

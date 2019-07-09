@@ -27,7 +27,6 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport  {
   }
 
   post("/toserver") {    
-    println("toto")
     val tab = parsedBody.extract[Array[Msg]]
     val msg= ext2msg(tab.toList)
     val res= Solutions.init.process(msg).toList
