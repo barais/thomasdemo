@@ -1,18 +1,18 @@
-var Pay = /** @class */ (function () {
-    function Pay(a, b, c, d) {
+var Payd = /** @class */ (function () {
+    function Payd(a, b, c, d) {
         this.a = a;
         this.b = b;
         this.c = c;
         this.d = d;
     }
-    return Pay;
+    return Payd;
 }());
 
 $(document).ready(function () {
     $('#client-sends').click(function () {
         console.log($("#client").val());
         // Je construit mon objet métier
-        var p = new Pay(+$("#client").val(), +$("#merchant").val(), +$("#transaction").val(), +$("#amount").val());
+        var p = new Payd(+$("#client").val(), +$("#merchant").val(), +$("#transaction").val(), +$("#amount").val());
         console.log('JSON='+JSON.stringify(p));
         // Je l'envoie au serveur
         console.log(jQuery);
