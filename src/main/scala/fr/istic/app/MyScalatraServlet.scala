@@ -8,7 +8,6 @@ import org.json4s.{DefaultFormats, Formats}
 import org.scalatra.json._
 
 import bank._
-import bank.Solutions
 
 class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport  {
   
