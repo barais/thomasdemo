@@ -54,7 +54,6 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport  {
 }
 
 case class Msg(ofType:String, a: Int, b: Int, c: Int, d:Int){}
-case class Tp(tp1:String,tp2:String, tp3:String)
 
 // For the demo
 case class Payd( a: Int,  b: Int,  c: Int,  d:Int){}

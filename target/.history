@@ -25,3 +25,17 @@ jetty:stop
 evicted
 compile
 evicted
+jetty:start
+evicted
+jetty:stop
+compile
+compile -feature
+compile help
+help
+help compile
+feature compile
+compile feature
+compile /feature
+compile /-feature
+compile
+jetty:start
