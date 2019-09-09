@@ -59,14 +59,14 @@ function mytostring(t){
 
 // Mise à jour de l'historique des messages et du résultat pour tous les tps
 // Tout ce que l'on sait sur ret (passé depuis scala vers javascript en passant par JSON)
-// c'est que c'est un tableau d'objets dont les 2 champs sont
+// c'est que c'est un tableau d'objets dont 2 des champs sont
 // name et resultat
 function update(ret,h){
     // res= le retour du serveur
     // h= l'historique des messages
     const retL=ret.length;
     for (i=0; i<retL; i++){
-        resultString(ret[i].name,ret[i].resultat)
+        resultString(ret[i].name,(ret[i].resultat+ret[i].correct))
     }
     const histo= $("#messages");
     console.log("avant: "+h)

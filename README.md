@@ -1,4 +1,4 @@
-# ThomasDemo #
+# TP89_WEB
 
 Ceci est une version simplifiée de ce qu'avait proposé Olivier en premier lieu.
 Il ne reste plus que le serveur Scalatra <-JSON-> Client javascript.

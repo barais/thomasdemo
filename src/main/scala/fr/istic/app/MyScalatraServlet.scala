@@ -6,16 +6,19 @@ import org.json4s.{DefaultFormats, Formats}
 
 // JSON handling support from Scalatra
 import org.scalatra.json._
-
 import bank._
 
 class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport  {
   
+  // mapping from tp names to maps of broken properties (a set of List of Msg)
+  private var resultsNok= Map[String,Map[Int,Set[List[Msg]]]]()
+  //private var AllTps= Solutions.init.process(List()).toList
+  
+  
   protected implicit def int2Nat(x:Int)= Nat.Nata(BigInt(x))
   
   protected implicit lazy val jsonFormats: Formats = DefaultFormats
-
-  
+			
   // converts external messages (from javascript) to internal bank message
   protected def ext2msg(l:List[Msg]):List[message]=
     l match {

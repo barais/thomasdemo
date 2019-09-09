@@ -229,6 +229,7 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="src/libJars/Adili.jar"/>
 	<classpathentry kind="lib" path="src/libJars/genetProved.jar"/>
+	<classpathentry kind="lib" path="src/libJars/chenaa_maison.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
