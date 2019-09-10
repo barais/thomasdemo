@@ -41,7 +41,7 @@ case class Solutions(
 object Solutions {
   def init = Solutions(() => new validator.genetProved.ConcreteValidator, // the reference implem
       // student implementations
-    () => new validator.Adili.ConcreteValidator,                 
+    //() => new validator.Adili.ConcreteValidator,                 
     () => new validator.CHENAA.ConcreteValidator
   )
 }

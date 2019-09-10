@@ -20,6 +20,8 @@ Msg.prototype.toString= function toString(){
     return(this.ofType+'('+this.a+','+this.b+','+this.c+s+')')
 }
 
+//le verrou qui empêche document.ready de démarrer!
+$.holdReady(true);
 // On récupère la liste de tous les noms de Tps
 // et on complète la page web avec les balises nécessaires
 $.ajax({
@@ -27,7 +29,8 @@ $.ajax({
 	type: 'GET',
 	datatype : 'json',
 	success: function(data){
-		initResPage(data);
+        initResPage(data);
+        $.holdReady(false); //maintenant document.ready va pouvoir lancer le listener!
 	},
 	error: function(error){
 		console.log("init error:"+error);
@@ -40,9 +43,20 @@ function initResPage(ltps){
 	const res= $("#res");
 	res.append('<ul>');
 	for (var tp of ltps){
-		res.append('<li><b>'+tp.name+': </b> <label id='+tp.name+'>'+""+'</label></li><br>');
+        res.append('<li>');
+        res.append ('<b>'+tp.name+': </b>');
+        // on ajoute les boutons pour les propriétés
+        for (i=1;i<10;i++){
+            //res.append('<button id='+tp.name+"_prop_"+i+' name='+tp.name+"_prop_"+i+' disabled=true>'+i+'</button>')
+            res.append('<button class="prop" id="'+tp.name+"_prop_"+i+'" name="'+tp.name+"_prop_"+i+'">'+i+'</button>')
+            console.log('<button class="prop" id="'+tp.name+"_prop_"+i+'" name="'+tp.name+"_prop_"+i+'">'+i+'</button>')
+        }
+        // on ajoute le label qui sera complété par les transactions
+        // validées ou non
+        res.append('<label id='+tp.name+'>'+" List()"+'</label>')  //label dont le contenu est vide au départ
+        res.append('</li>');
 	}
-	res.append('</ul>')
+    res.append('</ul>');
 }
 
 // Remplacement de la chaîne s dans la zone de résultat r
@@ -66,7 +80,12 @@ function update(ret,h){
     // h= l'historique des messages
     const retL=ret.length;
     for (i=0; i<retL; i++){
-        resultString(ret[i].name,(ret[i].resultat+ret[i].correct))
+        resultString(ret[i].name,(ret[i].resultat))
+        // On active/désactive les boutons pour les propriétés
+        // en fonction de la valeur de ret[i].correct
+        for (j=1; j<10; j++){
+            $('#'+ret[i].name+'_prop_'+j).attr("disabled",ret[i].correct);
+        }
     }
     const histo= $("#messages");
     console.log("avant: "+h)
@@ -80,8 +99,8 @@ $(document).ready(function () {
         var p = new Msg("Pay", +$("#client").val(), +$("#merchant").val(), +$("#transaction").val(), +$("#amount").val());
         msgHistory.push(p);
         console.log('JSON='+JSON.stringify(msgHistory));
-        // Je l'envoie au serveur
         console.log(jQuery);
+        // Je l'envoie au serveur
         $.ajax({
             url: '/toserver',
             type: 'POST',
@@ -98,6 +117,39 @@ $(document).ready(function () {
             }
         });
     });
+
+    // On assigne à chaque bouton "propriété" la bonne action!
+    $( ".prop" ).each(function(index) {    // Pout tous les boutons ayant class=prop
+        $(this).on("click", function(){
+            const tempHisto= Array.from(msgHistory)
+            // Dummy message with the prop name and tp name
+            const p = new Msg($(this).attr('id'), 0, 0, 0, 0);
+            tempHisto.unshift(p); // We add the message as first element of the temporary message sequence 
+            console.log(msgHistory);
+            console.log(tempHisto);
+            console.log()
+            var boolKey = $(this).attr('id');  // on logue l'attribut id du bouton!
+            console.log(boolKey);     
+            $.ajax({
+                url: '/toserverProp',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(tempHisto),
+                dataType: 'json',
+                success: function (data) {
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        });
+    });
+
+    // for (var j=1; j<10; j++){
+    //     $('#CHENAA_prop_'+j).click(function(){
+    //         console.log('click '+j);
+    //     });
+    // };
 
     $('#merchant-sends').click(function () {
         // Je construis mon objet métier
