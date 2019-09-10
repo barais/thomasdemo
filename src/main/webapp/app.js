@@ -47,8 +47,8 @@ function initResPage(ltps){
         res.append ('<b>'+tp.name+': </b>');
         // on ajoute les boutons pour les propriétés
         for (i=1;i<10;i++){
-            //res.append('<button id='+tp.name+"_prop_"+i+' name='+tp.name+"_prop_"+i+' disabled=true>'+i+'</button>')
-            res.append('<button class="prop" id="'+tp.name+"_prop_"+i+'" name="'+tp.name+"_prop_"+i+'">'+i+'</button>')
+            res.append('<button class="prop" id='+tp.name+"_prop_"+i+' name='+tp.name+"_prop_"+i+' disabled=true>'+i+'</button>')
+            //res.append('<button class="prop" id="'+tp.name+"_prop_"+i+'" name="'+tp.name+"_prop_"+i+'">'+i+'</button>')
             console.log('<button class="prop" id="'+tp.name+"_prop_"+i+'" name="'+tp.name+"_prop_"+i+'">'+i+'</button>')
         }
         // on ajoute le label qui sera complété par les transactions
