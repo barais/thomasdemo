@@ -21,6 +21,7 @@ case class Solutions(
 	    // wwe have to keep the reference implem as the first, otherwise I have a
 	    // bug: the first button (of the first tp) is always clicked!!
 			for (s <- (reference+:ss).map(_.apply())) yield {
+			//for (s <- (ss:+reference).map(_.apply())) yield {
 				try{
 					Try {
 						ms.foreach(s.process)
@@ -42,9 +43,9 @@ case class Solutions(
 
 object Solutions {
   def init = Solutions(() => new validator.genetProved.ConcreteValidator, // the reference implem
-      // student implementations
-    () => new validator.Adili.ConcreteValidator,                 
-    () => new validator.CHENAA.ConcreteValidator
+      // student implementations            
+    () => new validator.CHENAA.ConcreteValidator,
+    () => new validator.Adili.ConcreteValidator
   )
 }
 

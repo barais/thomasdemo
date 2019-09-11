@@ -111,3 +111,7 @@ jetty:stop
 jetty:start
 jetty:stop
 jetty:start
+jetty:stop
+jetty:start
+build
+jetty:start

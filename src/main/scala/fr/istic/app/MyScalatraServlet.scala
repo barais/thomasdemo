@@ -10,22 +10,18 @@ import bank._
 
 class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport  {
   
-  // mapping from tp names to maps of broken properties (a set of List of Msg)
+  /** resultTable: mapping from tp names to maps of broken properties (a set of List of Msg) */
   private var resultsNok= Map[String,Map[Int,Set[List[message]]]]()
   
+  /** update of resultTable */
   private def update(tpname:String,propnumber:Int,msg:List[message]):Unit={
     var attackForTPname= resultsNok.getOrElse(tpname,Map[Int,Set[List[message]]]())
     attackForTPname= attackForTPname + (propnumber -> (attackForTPname.getOrElse(propnumber, Set[List[message]]()) + msg))
     resultsNok= resultsNok + (tpname -> attackForTPname)
   }
 
-  private def extractProp(tab:Array[Msg])={
-    tab(0) match {
-      case Msg(pn,_,_,_,_) => (pn,tab.toList.tail)
-    }
-  }
   protected implicit def int2Nat(x:Int)= Nat.Nata(BigInt(x))
-  
+
   protected implicit lazy val jsonFormats: Formats = DefaultFormats
 			
   // converts external messages (from javascript) to internal bank message
@@ -47,19 +43,24 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport  {
   
   post("/toserverProp") {    
     val tab = parsedBody.extract[Array[Msg]]
-    val (prop_name,l2) = extractProp(tab)
+    val (prop_name,l2) = Export.extractProp(tab)
     val msg= ext2msg(l2)
     val split= prop_name.split("_prop_")
-    val tpname=split(0)
-    val propnumber= split(1).toInt
-    // When we update the global variable of the serveur, we do this in a synchronized fashion by taking
-    // a lock on the server object itself.
-    this.synchronized({
-        // This part will be executed in mutual exclusion
-       update(tpname,propnumber,msg)
-    })
-    println(resultsNok)
-    ()
+    try{
+      val tpname=split(0)
+      val propnumber= split(1).toInt
+      // When we update the global variable of the serveur, we do this in a synchronized fashion by taking
+      // a lock on the server object itself.
+      this.synchronized({
+          // This part will be executed in mutual exclusion
+         update(tpname,propnumber,msg)
+      })
+      this.synchronized({
+        Export.exportResults(resultsNok)
+      })
+    } catch {
+      case _:java.lang.ArrayIndexOutOfBoundsException => println("Split has failed!")
+    }
   }
   
   // Before every action runs, set the content type to be in JSON format.
