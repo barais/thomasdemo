@@ -17,8 +17,10 @@ case class Solutions(
 	    // we get the reference solution
 	    val referenceSol= referenceImplem.getValidTrans.map { case ((Nat.Nata(c), (Nat.Nata(m), Nat.Nata(t))), Nat.Nata(a)) => (c.toInt, m.toInt, t.toInt, a.toInt) }
 	    
-	    // for all tps (appending the reference implem itself)
-			for (s <- (ss:+reference).map(_.apply())) yield {
+	    // for all tps (prePending the reference implem itself)
+	    // wwe have to keep the reference implem as the first, otherwise I have a
+	    // bug: the first button (of the first tp) is always clicked!!
+			for (s <- (reference+:ss).map(_.apply())) yield {
 				try{
 					Try {
 						ms.foreach(s.process)
@@ -41,7 +43,7 @@ case class Solutions(
 object Solutions {
   def init = Solutions(() => new validator.genetProved.ConcreteValidator, // the reference implem
       // student implementations
-    //() => new validator.Adili.ConcreteValidator,                 
+    () => new validator.Adili.ConcreteValidator,                 
     () => new validator.CHENAA.ConcreteValidator
   )
 }

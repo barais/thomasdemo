@@ -1,11 +1,18 @@
+// La borne sur les valeurs entières
+function bound(a){
+    if (isNaN(a) | a<0) return 0
+    else if (a>10000) return 10000
+          else return a
+}
+
 // Le format des messages vu depuis javascript 
 var Msg = /** @class */ (function () {
     function Msg(ofType, a, b, c, d) {
         this.ofType = ofType;
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = d;
+        this.a = bound(a);
+        this.b = bound(b);
+        this.c = bound(c);
+        this.d = bound(d);
     }
     return Msg;
 }());
@@ -44,13 +51,13 @@ function initResPage(ltps){
 	res.append('<ul>');
 	for (var tp of ltps){
         res.append('<li>');
-        res.append ('<b>'+tp.name+': </b>');
         // on ajoute les boutons pour les propriétés
         for (i=1;i<10;i++){
             res.append('<button class="prop" id='+tp.name+"_prop_"+i+' name='+tp.name+"_prop_"+i+' disabled=true>'+i+'</button>')
-            //res.append('<button class="prop" id="'+tp.name+"_prop_"+i+'" name="'+tp.name+"_prop_"+i+'">'+i+'</button>')
-            console.log('<button class="prop" id="'+tp.name+"_prop_"+i+'" name="'+tp.name+"_prop_"+i+'">'+i+'</button>')
-        }
+            //console.log('<button class="prop" id="'+tp.name+"_prop_"+i+'" name="'+tp.name+"_prop_"+i+'">'+i+'</button>')
+            }
+        // on ajoute le nom du TP
+        res.append ('<b> '+tp.name+': </b>');
         // on ajoute le label qui sera complété par les transactions
         // validées ou non
         res.append('<label id='+tp.name+'>'+" List()"+'</label>')  //label dont le contenu est vide au départ

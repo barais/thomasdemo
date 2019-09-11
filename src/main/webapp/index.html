@@ -14,14 +14,14 @@
     <h1>TP89 ACF</h1>
 
 
-            <label>Client Id <input type="number" name="client" required min="0" id="client"/></label>
+            <label>Client Id <input type="number" name="client" required min="0" required max="10000" id="client"/></label>
 
-            <label>Merchant Id <input type="number" name="merchant" required min="0" id="merchant"/></label>
+            <label>Merchant Id <input type="number" name="merchant" required min="0" required max="10000" id="merchant"/></label>
 
 
-            <label>Transaction Id <input type="number" name="transaction" required min="0" id="transaction" /></label>
+            <label>Transaction Id <input type="number" name="transaction" required min="0" required max="10000" id="transaction" /></label>
 
-            <label>Amount <input type="number" name="amount" required min="0" id="amount" /></label>
+            <label>Amount <input type="number" name="amount" required min="0" required max="10000" id="amount" /></label>
 
 
             <button id="client-sends" name="client-sends">Client sends</button>

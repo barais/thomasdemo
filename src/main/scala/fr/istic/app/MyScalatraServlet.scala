@@ -52,7 +52,12 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport  {
     val split= prop_name.split("_prop_")
     val tpname=split(0)
     val propnumber= split(1).toInt
-    update(tpname,propnumber,msg)
+    // When we update the global variable of the serveur, we do this in a synchronized fashion by taking
+    // a lock on the server object itself.
+    this.synchronized({
+        // This part will be executed in mutual exclusion
+       update(tpname,propnumber,msg)
+    })
     println(resultsNok)
     ()
   }
