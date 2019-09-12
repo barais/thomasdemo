@@ -10,6 +10,12 @@ import bank._
 
 import java.nio.file.{Paths, Files}
 import java.io._
+
+/** Beware! server internal state is serialized into 2 files (for robustness) into export/resultTable1.obj and export/resultTable2.obj.
+ *  If those two files exists the initialization of the server reads the **last** internal state (attacks) in those files.
+ *  To have a complete restart of the server, you should **remove** those two files!
+ */
+
 class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport  {
   
   var resultsNok= new SerializedTable()
