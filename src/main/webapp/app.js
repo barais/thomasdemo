@@ -157,7 +157,8 @@ $(document).ready(function () {
                 success: function (data) {
                     //on ajax succes do this
                     var ret= data;
-                    updateProp(ret)
+                    // If the property violation signal was successful we update the page
+                    if (ret.tpname!="") updateProp(ret);
                 },
                 error: function (error) {
                     console.log(error);
