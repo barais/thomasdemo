@@ -7,6 +7,18 @@
         crossorigin="anonymous"> -->
 
     <title>TP89 ACF</title>
+    <style>
+        .redtext {
+            color: red;
+        }
+        .blacktext {
+            color:black;
+        }
+    mark{
+        color:red;
+        background-color: white;
+    }
+    </style>
 
 </head>
 
@@ -14,14 +26,14 @@
     <h1>TP89 ACF</h1>
 
 
-            <label>Client Id <input type="number" name="client" required min="0" required max="10000" id="client"/></label>
+            <label>Client Id <input type="text" name="client" required size="5" required min="0" required max="10000" id="client"/></label>
 
-            <label>Merchant Id <input type="number" name="merchant" required min="0" required max="10000" id="merchant"/></label>
+            <label>Merchant Id <input type="text" name="merchant" required size="5" required min="0" required max="10000" id="merchant"/></label>
 
 
-            <label>Transaction Id <input type="number" name="transaction" required min="0" required max="10000" id="transaction" /></label>
+            <label>Transaction Id <input type="text" name="transaction" required size="5" required min="0" required max="10000" id="transaction" /></label>
 
-            <label>Amount <input type="number" name="amount" required min="0" required max="10000" id="amount" /></label>
+            <label>Amount <input type="text" name="amount" required size="5" required min="0" required max="10000" id="amount" /></label>
 
 
             <button id="client-sends" name="client-sends">Client sends</button>
@@ -30,7 +42,12 @@
 
             <hr noshade="noshade" size="5" width="100%">
 
-            <b>Message history : </b><label id="messages"></label>
+            <b>Instructions:</b> When the result given by a transaction validator is erroneous, the author name is highlighted in <mark>red</mark>. Then, you can click
+            on the identifiers of the violated properties.
+
+            <hr noshade="noshade" size="5" width="100%">
+            
+            <b>Message history: </b><label id="messages"></label>
 
             <hr noshade="noshade" size="5" width="100%">
 

@@ -48,7 +48,7 @@ $.ajax({
 // initialisation des balises pour afficher les résultats de tous les tps
 function initResPage(ltps){
 	const res= $("#res");
-	res.append('<ul>');
+	res.append('<mark>');
 	for (var tp of ltps){
         res.append('<li>');
         // on ajoute les boutons pour les propriétés
@@ -57,7 +57,7 @@ function initResPage(ltps){
             //console.log('<button class="prop" id="'+tp.name+"_prop_"+i+'" name="'+tp.name+"_prop_"+i+'">'+i+'</button>')
             }
         // on ajoute le nom du TP
-        res.append ('<b> '+tp.name+': </b>');
+        res.append ('<b id="'+tp.name+'_col" class="blacktext"> '+tp.name+': </b>');
         // on ajoute le label qui sera complété par les transactions
         // validées ou non
         res.append('<label id='+tp.name+'>'+" List()"+'</label>')  //label dont le contenu est vide au départ
@@ -87,6 +87,10 @@ function update(ret,h){
     // h= l'historique des messages
     const retL=ret.length;
     for (i=0; i<retL; i++){
+        if (!ret[i].correct)
+            $('#'+ret[i].name+'_col').attr("class","redtext")
+        else
+            $('#'+ret[i].name+'_col').attr("class","blacktext");
         resultString(ret[i].name,(ret[i].resultat))
         // On active/désactive les boutons pour les propriétés
         // en fonction de la valeur de ret[i].correct
@@ -97,6 +101,13 @@ function update(ret,h){
     const histo= $("#messages");
     console.log("avant: "+h)
     histo.text(mytostring(h))
+}
+
+// mise à jour du texte résultat avec les noms des propriétés violées
+function updateProp(ret){
+    const tpObj= $('#'+ret.tpname);
+    const oldText= tpObj.text();
+    if (!oldText.includes(ret.prop)) tpObj.text(oldText+' '+ret.prop);
 }
 
 // Les fonctions associées aux boutons du document
@@ -144,6 +155,9 @@ $(document).ready(function () {
                 data: JSON.stringify(tempHisto),
                 dataType: 'json',
                 success: function (data) {
+                    //on ajax succes do this
+                    var ret= data;
+                    updateProp(ret)
                 },
                 error: function (error) {
                     console.log(error);

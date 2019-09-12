@@ -54,12 +54,12 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport  {
       this.synchronized({
           // This part will be executed in mutual exclusion
          update(tpname,propnumber,msg)
+         if (Export.isTimeToSave) Export.exportResults(resultsNok)
       })
-      this.synchronized({
-        Export.exportResults(resultsNok)
-      })
+      ResProp(tpname,"prop_"+propnumber)
     } catch {
       case _:java.lang.ArrayIndexOutOfBoundsException => println("Split has failed!")
+      ResProp("","")
     }
   }
   
@@ -83,6 +83,8 @@ class MyScalatraServlet extends ScalatraServlet with JacksonJsonSupport  {
 }
 
 case class Msg(ofType:String, a: Int, b: Int, c: Int, d:Int){}
+
+case class ResProp(tpname:String,prop:String)
 
 // For the demo
 case class Payd( a: Int,  b: Int,  c: Int,  d:Int){}
