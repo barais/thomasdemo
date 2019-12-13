@@ -42,8 +42,43 @@
 
             <hr noshade="noshade" size="5" width="100%">
 
-            <b>Instructions:</b> When the result given by a transaction validator is erroneous, the author name is highlighted in <mark>red</mark>. Then, you can click
-            on the identifiers of the violated properties.
+            <b>Instructions:</b> Quand un résultat produit par le validateur de transaction est erroné, le nom des auteurs 
+            est coloré en <mark>rouge</mark>. Dans ce cas, <b>vous pouvez cliquer sur les numéros</b> des propriétés qui ont été violées. On rappelle les numéros associés aux propriétés:
+            <ol>
+                <li>Toutes les transactions validées ont un montant strictement supérieur à 0.</li>
+                <li>Dans la liste de transactions validées, tout triplet <code>(c,m,i)</code> (où <code>c</code> est un numéro de client, <code>m</code> est un numéro de marchand 
+                    et <code>i</code> un numéro de transaction) n'apparaît qu'une seule fois.</li>
+                <li>Toute transaction (même validée) peut être annulée.</li>
+                <li>Toute transaction annulée l'est définitivement: un message <code> (Cancel
+                    (c,m,i))</code> rend impossible  la validation d'une transaction de numéro <code>i</code> entre un marchand <code>m</code> et un client <code>c</code>.</li>
+                <li>Si un message <code> Pay</code> et un message <code> Ack</code> avec un même
+                    identifiant <code> (c, m, i)</code> ont été envoyés, tels que le montant
+                    proposé par le <code> Pay</code> est strictement supérieur à 0, et est
+                    supérieur ou égal au montant proposé par le message <code> Ack</code>, et
+                    s'il n'y a pas eu d'annulation pour <code> (c, m, i)</code>, alors une
+                    transaction pour <code> (c, m, i)</code> figure dans la liste des
+                    transactions validées.</li>
+                <li>
+                    Toute transaction figurant dans la liste des transactions validées l'a été
+                    par un message <code> Pay</code> et un message <code> Ack</code> tels que le montant proposé
+                    par le <code> Pay</code> est supérieur ou égal au montant proposé par le message <code>
+                      Ack</code>.
+                </li>
+                <li>
+                    Si un client (resp. marchand) a proposé un montant <code> am</code> pour une
+                    transaction, tout montant <code> am'</code> inférieur (resp. supérieur) proposé par la 
+                    suite est ignoré par l'agent de validation.
+                </li>
+                <li>
+                    Toute transaction validée ne peut être renégociée: si une transaction a
+                    été validée avec un montant <code> am</code> celui-ci ne peut être changé.
+                </li>
+                <li>
+                    Le montant associé à une transaction validée correspond à un prix proposé
+                    par le client pour cette transaction.
+                </li>
+
+            </ol>
 
             <hr noshade="noshade" size="5" width="100%">
             
