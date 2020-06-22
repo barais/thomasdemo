@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="bugged">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/libJars/bugged.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

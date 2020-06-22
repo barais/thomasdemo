@@ -44,8 +44,42 @@ case class Solutions(
 object Solutions {
   def init = Solutions(() => new validator.genetProved.ConcreteValidator, // the reference implem
       // student implementations            
-    () => new validator.CHENAA.ConcreteValidator,
-    () => new validator.Adili.ConcreteValidator
+        () => new validator.Aitouali.ConcreteValidator,
+    () => new validator.BenchbabaDermoumi.ConcreteValidator,
+    () => new validator.BEUCHER_DROOGH.ConcreteValidator,
+    () => new validator.BouilletRichard.ConcreteValidator,
+    () => new validator.boutheroue_desmarais.ConcreteValidator,
+    () => new validator.BRAHMI_CAROFF.ConcreteValidator,
+    () => new validator.ChenaaAkira.ConcreteValidator,
+    () => new validator.Ebor_Fierobe.ConcreteValidator,
+    () => new validator.cussonloisel.ConcreteValidator,
+    () => new validator.ThomasEsseul.ConcreteValidator,
+    () => new validator.YouriBernard.ConcreteValidator, 
+    
+    () => new validator.Delorme_Largeau.ConcreteValidator,
+    () => new validator.GagoudLesne.ConcreteValidator,
+    () => new validator.gernezGuzik.ConcreteValidator,
+    () => new validator.HartJammesBeuve.ConcreteValidator,
+    () => new validator.LAFIA_MONWOO_LAMDASNI.ConcreteValidator,
+    () => new validator.LeFloch_Thomas_et_Grossin_Tanguy.ConcreteValidator,
+    () => new validator.LeroyLaperrouse.ConcreteValidator,
+    () => new validator.LittleFourniols.ConcreteValidator,
+    () => new validator.MathieuLePape.ConcreteValidator,
+    () => new validator.Le_Meur.ConcreteValidator,  
+    
+    () => new validator.EVANO_MARTIN.ConcreteValidator,
+    () => new validator.GilletMavromatis.ConcreteValidator,
+    () => new validator.MALNOE_RICARD.ConcreteValidator,
+    () => new validator.MARQUER_GUY.ConcreteValidator,
+    () => new validator.ouattara_rauzier.ConcreteValidator,
+    () => new validator.Pedaran_Sourisseau.ConcreteValidator,
+    () => new validator.Pelcat_VanNiekerk.ConcreteValidator,
+
+    () => new validator.PHAM_RONCIER.ConcreteValidator,
+    () => new validator.Tayac_Rousselle.ConcreteValidator,
+
+    () => new validator.RemiVIOTTY.ConcreteValidator,
+    () => new validator.Rio_Vixel.ConcreteValidator
   )
 }
 
