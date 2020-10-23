@@ -227,8 +227,41 @@
 			<attribute name="javadoc_location" value="jar:file:/Users/thomasgenet/.ivy2/cache/org.objenesis/objenesis/docs/objenesis-2.5-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="src/libJars/Adili.jar"/>
 	<classpathentry kind="lib" path="src/libJars/genetProved.jar"/>
+	<classpathentry kind="lib" path="src/libJars/AITOUALI.jar"/>
+	<classpathentry kind="lib" path="src/libJars/Benchbaba_Dermoumi.jar"/>
+	<classpathentry kind="lib" path="src/libJars/beucher_droogh.jar"/>
+	<classpathentry kind="lib" path="src/libJars/Bouillet_Richard.jar"/>
+	<classpathentry kind="lib" path="src/libJars/BOUTHEROUE_DESMARAIS.jar"/>
+	<classpathentry kind="lib" path="src/libJars/BRAHMI_CAROFF.jar"/>
+	<classpathentry kind="lib" path="src/libJars/Chenaa_Akira.jar"/>
+	<classpathentry kind="lib" path="src/libJars/Delorme_Largeau.jar"/>
+	<classpathentry kind="lib" path="src/libJars/Ebor_Fierobe.jar"/>
+	<classpathentry kind="lib" path="src/libJars/EVANO_MARTIN_TP89.jar"/>
+	<classpathentry kind="lib" path="src/libJars/evano_martin.jar"/>
+	<classpathentry kind="lib" path="src/libJars/GagoudLesne.jar"/>
+	<classpathentry kind="lib" path="src/libJars/GernezGuzik_TP89_ACF.jar"/>
+	<classpathentry kind="lib" path="src/libJars/GilletMavromatis.jar"/>
+	<classpathentry kind="lib" path="src/libJars/HART_JAMMES-BEUVE.jar"/>
+	<classpathentry kind="lib" path="src/libJars/LAFIA_MONWOO_LAMDASNI_TP89_ACF.jar"/>
+	<classpathentry kind="lib" path="src/libJars/LeFloch_Thomas_et_Grossin_Tanguy.jar"/>
+	<classpathentry kind="lib" path="src/libJars/LeroyLaperrouse.jar"/>
+	<classpathentry kind="lib" path="src/libJars/LittleFourniols.jar"/>
+	<classpathentry kind="lib" path="src/libJars/loisel_cusson.jar"/>
+	<classpathentry kind="lib" path="src/libJars/MalnoeRicard.jar"/>
+	<classpathentry kind="lib" path="src/libJars/Marquer_Guy_TP89_ACF.jar"/>
+	<classpathentry kind="lib" path="src/libJars/MathieuLePape.jar"/>
+	<classpathentry kind="lib" path="src/libJars/ouattara_rauzier.jar"/>
+	<classpathentry kind="lib" path="src/libJars/Pedaran_Sourisseau.jar"/>
+	<classpathentry kind="lib" path="src/libJars/pedaran.jar"/>
+	<classpathentry kind="lib" path="src/libJars/pelcat.jar"/>
+	<classpathentry kind="lib" path="src/libJars/RemiVIOTTY_TP89_ACF .jar"/>
+	<classpathentry kind="lib" path="src/libJars/RONCIER_PHAM.jar"/>
+	<classpathentry kind="lib" path="src/libJars/Rousselle_Tayac_Tp89_Scala.jar"/>
+	<classpathentry kind="lib" path="src/libJars/TP89_Le_Meur.jar"/>
+	<classpathentry kind="lib" path="src/libJars/TP89ThomasEsseul.jar"/>
+	<classpathentry kind="lib" path="src/libJars/Vixel_Rio.jar"/>
+	<classpathentry kind="lib" path="src/libJars/Youri_Bernard.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

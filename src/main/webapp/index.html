@@ -7,6 +7,18 @@
         crossorigin="anonymous"> -->
 
     <title>TP89 ACF</title>
+    <style>
+        .redtext {
+            color: red;
+        }
+        .blacktext {
+            color:black;
+        }
+    mark{
+        color:red;
+        background-color: white;
+    }
+    </style>
 
 </head>
 
@@ -14,24 +26,63 @@
     <h1>TP89 ACF</h1>
 
 
-            <label>Client Id <input type="number" name="client" required min="0" id="client"/></label>
+            <label>Client Id <input type="text" name="client" required size="5" required min="0" required max="10000" id="client"/></label>
 
-            <label>Merchant Id <input type="number" name="merchant" required min="0" id="merchant"/></label>
+            <label>Merchant Id <input type="text" name="merchant" required size="5" required min="0" required max="10000" id="merchant"/></label>
 
 
-            <label>Transaction Id <input type="number" name="transaction" required min="0" id="transaction" /></label>
+            <label>Transaction Id <input type="text" name="transaction" required size="5" required min="0" required max="10000" id="transaction" /></label>
 
-            <label>Amount <input type="number" name="amount" required min="0" id="amount" /></label>
+            <label>Amount <input type="text" name="amount" required size="5" required min="0" required max="10000" id="amount" /></label>
 
 
             <button id="client-sends" name="client-sends">Client sends</button>
             <button id="merchant-sends" name="merchant-sends">Merchant sends</button>
             <button id="merchant-cancels" name="merchant-cancels">Merchant cancels</button>
 
-
             <hr noshade="noshade" size="5" width="100%">
 
-            <b>Historique des messages: </b><label id="messages"></label>
+            <b>Instructions:</b> Quand un résultat produit par le validateur de transaction est erroné, le nom des auteurs 
+            est coloré en <mark>rouge</mark>. Dans ce cas, <b>vous pouvez cliquer sur les numéros</b> des propriétés qui ont été violées. On rappelle les numéros associés aux propriétés:
+            <ol>
+                <li>Toutes les transactions validées ont un montant strictement supérieur à 0.</li>
+                <li>Dans la liste de transactions validées, tout triplet <code>(c,m,i)</code> (où <code>c</code> est un numéro de client, <code>m</code> est un numéro de marchand 
+                    et <code>i</code> un numéro de transaction) n'apparaît qu'une seule fois.</li>
+                <li>Toute transaction (même validée) peut être annulée.</li>
+                <li>Toute transaction annulée l'est définitivement: un message <code> (Cancel
+                    (c,m,i))</code> rend impossible  la validation d'une transaction de numéro <code>i</code> entre un marchand <code>m</code> et un client <code>c</code>.</li>
+                <li>Si un message <code> Pay</code> et un message <code> Ack</code> avec un même
+                    identifiant <code> (c, m, i)</code> ont été envoyés, tels que le montant
+                    proposé par le <code> Pay</code> est strictement supérieur à 0, et est
+                    supérieur ou égal au montant proposé par le message <code> Ack</code>, et
+                    s'il n'y a pas eu d'annulation pour <code> (c, m, i)</code>, alors une
+                    transaction pour <code> (c, m, i)</code> figure dans la liste des
+                    transactions validées.</li>
+                <li>
+                    Toute transaction figurant dans la liste des transactions validées l'a été
+                    par un message <code> Pay</code> et un message <code> Ack</code> tels que le montant proposé
+                    par le <code> Pay</code> est supérieur ou égal au montant proposé par le message <code>
+                      Ack</code>.
+                </li>
+                <li>
+                    Si un client (resp. marchand) a proposé un montant <code> am</code> pour une
+                    transaction, tout montant <code> am'</code> inférieur (resp. supérieur) proposé par la 
+                    suite est ignoré par l'agent de validation.
+                </li>
+                <li>
+                    Toute transaction validée ne peut être renégociée: si une transaction a
+                    été validée avec un montant <code> am</code> celui-ci ne peut être changé.
+                </li>
+                <li>
+                    Le montant associé à une transaction validée correspond à un prix proposé
+                    par le client pour cette transaction.
+                </li>
+
+            </ol>
+
+            <hr noshade="noshade" size="5" width="100%">
+            
+            <b>Message history: </b><label id="messages"></label>
 
             <hr noshade="noshade" size="5" width="100%">
 
