@@ -1,4 +1,3 @@
-val ScalatraVersion = "2.6.5"
 
 organization := "fr.istic"
 
@@ -6,23 +5,23 @@ name := "ThomasDemo"
 
 version := "0.1.0-SNAPSHOT"
 
-scalaVersion := "2.12.6"
+scalaVersion := "2.13.3"
 
 resolvers += Classpaths.typesafeReleases
 
 libraryDependencies ++= Seq(
-  "org.scalatra" %% "scalatra" % ScalatraVersion,
-  "org.scalatra" %% "scalatra-scalatest" % ScalatraVersion % "test",
-  "org.scalatra" %% "scalatra-json" % ScalatraVersion,
-  "org.json4s"   %% "json4s-jackson" % "3.6.6",
+  "org.scalatra" %% "scalatra" % "2.7.0",
+  "org.scalatra" %% "scalatra-scalatest" % "2.7.0" % "test",
+// https://mvnrepository.com/artifact/org.scalatra/scalatra-json
+  "org.scalatra" %% "scalatra-json" % "2.7.0",
+  "org.json4s"   %% "json4s-jackson" % "3.6.10",
   "ch.qos.logback" % "logback-classic" % "1.2.3" % "runtime",
-  "org.eclipse.jetty" % "jetty-webapp" % "9.4.9.v20180320" % "container;compile",
+  "org.eclipse.jetty" % "jetty-webapp" % "9.4.32.v20200930" % "container;compile",
   "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided",
  
 )
 
-enablePlugins(SbtTwirl)
-enablePlugins(ScalatraPlugin)
+// enablePlugins(ScalatraPlugin)
 
 unmanagedBase := baseDirectory.value / "src/libJars/"
 

@@ -13,7 +13,7 @@ Le workflow typique (pour modification et test local) est (sur les sources dans 
    par ex. index-demo.html
 3. mise à jour du code javascript (avec visual studio par ex) dans  webapp
    par ex. app-demo.html
-3. compilation du merdier: dans thomasdemo lancer ```sbt``` puis dans sbt ```jetty:start```  pour démarrer le serveur.
+3. compilation du merdier: dans thomasdemo lancer ```sbt``` puis dans sbt ```run```  pour démarrer le serveur.
 
 5. ouvrir un navigateur sur l'URL 
    [http://localhost:8080/index-demo.html](http://localhost:8080/index-demo.html)
